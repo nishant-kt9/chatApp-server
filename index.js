@@ -12,10 +12,12 @@ app.use((req, res, next) => {
     res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization');
     next();
   });
+
 app.use(cors({
     origin : process.env.FRONTEND_URL,
     credentials : true
 }))
+
 app.use(express.json())
 app.use(cookiesParser())
 
